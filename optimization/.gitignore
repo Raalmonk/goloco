@@ -1,0 +1,19 @@
+# Generated local environments, caches, and model artifacts
+__pycache__/
+*.py[cod]
+.venv*/
+.env
+.env.*
+.DS_Store
+work/
+rust/target/
+*.so
+*.dylib
+*.dll
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz

@@ -1,0 +1,562 @@
+{
+  "bundle_conversion_seconds": 99.14520047899987,
+  "calculated_crossovers": {
+    "formula": "first_output_median + (N - 1) * resident_median + optional_one_bundle_conversion",
+    "label": "Calculated scenario, not measured request sequences",
+    "packed_load_existing_bundle": 3,
+    "packed_load_with_conversion": 25,
+    "source_rust": 12
+  },
+  "correctness": {
+    "direct_fresh_original": 65,
+    "linked_to_first_output": 25,
+    "original_workload_oracle": 2
+  },
+  "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+  "groups": [
+    {
+      "arm": "chunk1",
+      "experiment_count": 3,
+      "group": "chunk_resident",
+      "iqr": 0.009918530000049941,
+      "max": 1.4472799580003084,
+      "median": 1.4380618780000987,
+      "min": 1.424956998000198,
+      "n": 5,
+      "q1": 1.4349283179999475,
+      "q3": 1.4448468479999974,
+      "record_ids": [
+        "p2-003",
+        "p2-005",
+        "p2-007",
+        "p2-012",
+        "p2-014"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "chunk256",
+      "experiment_count": 3,
+      "group": "chunk_resident",
+      "iqr": 0.009624849999909202,
+      "max": 5.072781467999903,
+      "median": 5.053049218999604,
+      "min": 4.933186911999655,
+      "n": 5,
+      "q1": 5.04419186899986,
+      "q3": 5.053816718999769,
+      "record_ids": [
+        "p2-001",
+        "p2-006",
+        "p2-008",
+        "p2-010",
+        "p2-015"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "chunk64",
+      "experiment_count": 3,
+      "group": "chunk_resident",
+      "iqr": 0.02659800899982656,
+      "max": 5.080719887999749,
+      "median": 5.068634887999906,
+      "min": 5.038339158999861,
+      "n": 5,
+      "q1": 5.048133749000044,
+      "q3": 5.074731757999871,
+      "record_ids": [
+        "p2-002",
+        "p2-004",
+        "p2-009",
+        "p2-011",
+        "p2-013"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "B3",
+      "experiment_count": 3,
+      "group": "matched_resident",
+      "iqr": 0.6199263679995966,
+      "max": 6.579938899999888,
+      "median": 6.366501654000331,
+      "min": 5.289098675000332,
+      "n": 5,
+      "q1": 5.912832063000224,
+      "q3": 6.53275843099982,
+      "record_ids": [
+        "p2-017",
+        "p2-018",
+        "p2-021",
+        "p2-022",
+        "p2-025"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "C0",
+      "experiment_count": 3,
+      "group": "matched_resident",
+      "iqr": 0.0031277600000976236,
+      "max": 0.9353941619997386,
+      "median": 0.9292960109996784,
+      "min": 0.9244217120003668,
+      "n": 5,
+      "q1": 0.926632101999985,
+      "q3": 0.9297598620000826,
+      "record_ids": [
+        "p2-016",
+        "p2-019",
+        "p2-020",
+        "p2-023",
+        "p2-024"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "A",
+      "experiment_count": 3,
+      "group": "original_request",
+      "iqr": 0.12142672600020887,
+      "max": 65.29966734399977,
+      "median": 65.17207109900005,
+      "min": 64.97980797299988,
+      "n": 5,
+      "q1": 65.14494058199989,
+      "q3": 65.2663673080001,
+      "record_ids": [
+        "p2-066",
+        "p2-067",
+        "p2-068",
+        "p2-069",
+        "p2-070"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "A",
+      "experiment_count": 32,
+      "group": "pilot_oracle",
+      "iqr": 0.0,
+      "max": 3.8700659850001102,
+      "median": 3.8700659850001102,
+      "min": 3.8700659850001102,
+      "n": 1,
+      "q1": 3.8700659850001102,
+      "q3": 3.8700659850001102,
+      "record_ids": [
+        "p2-072"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "32_synthetic_performance_experiments"
+    },
+    {
+      "arm": "A",
+      "experiment_count": 1,
+      "group": "pilot_oracle",
+      "iqr": 0.0,
+      "max": 3.863207574000171,
+      "median": 3.863207574000171,
+      "min": 3.863207574000171,
+      "n": 1,
+      "q1": 3.863207574000171,
+      "q3": 3.863207574000171,
+      "record_ids": [
+        "p2-071"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "one_original_experiment"
+    },
+    {
+      "arm": "B3",
+      "experiment_count": 32,
+      "group": "pilot_resident",
+      "iqr": 0.0047807400005694944,
+      "max": 0.4171529109999028,
+      "median": 0.41359112100008133,
+      "min": 0.399454001000322,
+      "n": 5,
+      "q1": 0.41194010099980005,
+      "q3": 0.41672084100036955,
+      "record_ids": [
+        "p2-084",
+        "p2-085",
+        "p2-088",
+        "p2-089",
+        "p2-092"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "32_synthetic_performance_experiments"
+    },
+    {
+      "arm": "C0",
+      "experiment_count": 32,
+      "group": "pilot_resident",
+      "iqr": 0.0003975390000050538,
+      "max": 0.15582850700002382,
+      "median": 0.15452804699998524,
+      "min": 0.15427546599994457,
+      "n": 5,
+      "q1": 0.15452040700029102,
+      "q3": 0.15491794600029607,
+      "record_ids": [
+        "p2-083",
+        "p2-086",
+        "p2-087",
+        "p2-090",
+        "p2-091"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "32_synthetic_performance_experiments"
+    },
+    {
+      "arm": "B3",
+      "experiment_count": 1,
+      "group": "pilot_resident",
+      "iqr": 0.0014352700000017649,
+      "max": 0.40243902100019113,
+      "median": 0.3979030320001584,
+      "min": 0.3940242710000348,
+      "n": 5,
+      "q1": 0.3968771810000362,
+      "q3": 0.398312451000038,
+      "record_ids": [
+        "p2-074",
+        "p2-075",
+        "p2-078",
+        "p2-079",
+        "p2-082"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "one_original_experiment"
+    },
+    {
+      "arm": "C0",
+      "experiment_count": 1,
+      "group": "pilot_resident",
+      "iqr": 0.0008488399998896057,
+      "max": 0.07619514900034119,
+      "median": 0.07499516899997616,
+      "min": 0.07281513899988568,
+      "n": 5,
+      "q1": 0.07449234799969418,
+      "q3": 0.07534118799958378,
+      "record_ids": [
+        "p2-073",
+        "p2-076",
+        "p2-077",
+        "p2-080",
+        "p2-081"
+      ],
+      "target_count": 1024,
+      "units": "seconds",
+      "workload": "one_original_experiment"
+    },
+    {
+      "arm": "historical_c0",
+      "experiment_count": 3,
+      "group": "process_first_output",
+      "iqr": 0.37270816799991735,
+      "max": 87.52369784099983,
+      "median": 87.106980389,
+      "min": 86.778281505,
+      "n": 3,
+      "q1": 86.942630947,
+      "q3": 87.31533911499992,
+      "record_ids": [
+        "p2-055",
+        "p2-059",
+        "p2-063"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "packed_load",
+      "experiment_count": 3,
+      "group": "process_first_output",
+      "iqr": 0.2106550280002466,
+      "max": 62.11269715300023,
+      "median": 62.064298172000235,
+      "min": 61.69138709699973,
+      "n": 3,
+      "q1": 61.877842634499984,
+      "q3": 62.08849766250023,
+      "record_ids": [
+        "p2-052",
+        "p2-056",
+        "p2-065"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "packed_mmap",
+      "experiment_count": 3,
+      "group": "process_first_output",
+      "iqr": 0.24084103499967568,
+      "max": 63.42425725699968,
+      "median": 63.32870304900007,
+      "min": 62.94257518700033,
+      "n": 3,
+      "q1": 63.1356391180002,
+      "q3": 63.376480152999875,
+      "record_ids": [
+        "p2-051",
+        "p2-060",
+        "p2-064"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "source_python_fast",
+      "experiment_count": 3,
+      "group": "process_first_output",
+      "iqr": 0.49331888500000787,
+      "max": 57.19214322800008,
+      "median": 56.618331174000105,
+      "min": 56.20550545800006,
+      "n": 3,
+      "q1": 56.41191831600008,
+      "q3": 56.90523720100009,
+      "record_ids": [
+        "p2-054",
+        "p2-058",
+        "p2-062"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "source_rust",
+      "experiment_count": 3,
+      "group": "process_first_output",
+      "iqr": 0.6711526740000409,
+      "max": 101.0061495519999,
+      "median": 100.88015480100012,
+      "min": 99.66384420399982,
+      "n": 3,
+      "q1": 100.27199950249997,
+      "q3": 100.9431521765,
+      "record_ids": [
+        "p2-053",
+        "p2-057",
+        "p2-061"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "historical_c0",
+      "experiment_count": 3,
+      "group": "standalone_resident",
+      "iqr": 0.0036142189997008245,
+      "max": 0.9355713520003519,
+      "median": 0.9311926619998303,
+      "min": 0.9264641019999544,
+      "n": 5,
+      "q1": 0.9304883720001271,
+      "q3": 0.934102590999828,
+      "record_ids": [
+        "p2-026",
+        "p2-027",
+        "p2-028",
+        "p2-029",
+        "p2-030"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "packed_load",
+      "experiment_count": 3,
+      "group": "standalone_resident",
+      "iqr": 0.002762609999990673,
+      "max": 1.356392994000089,
+      "median": 1.3547527939999782,
+      "min": 1.340134783999929,
+      "n": 5,
+      "q1": 1.3532994940001117,
+      "q3": 1.3560621040001024,
+      "record_ids": [
+        "p2-031",
+        "p2-032",
+        "p2-033",
+        "p2-034",
+        "p2-035"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "packed_mmap",
+      "experiment_count": 3,
+      "group": "standalone_resident",
+      "iqr": 0.005089790000056382,
+      "max": 1.4202062469998964,
+      "median": 1.416301086999738,
+      "min": 1.403087986999708,
+      "n": 5,
+      "q1": 1.4121615369999745,
+      "q3": 1.4172513270000309,
+      "record_ids": [
+        "p2-036",
+        "p2-037",
+        "p2-038",
+        "p2-039",
+        "p2-040"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "source_python_fast",
+      "experiment_count": 3,
+      "group": "standalone_resident",
+      "iqr": 0.5734473689999504,
+      "max": 6.568567223000173,
+      "median": 5.777371277999919,
+      "min": 5.760054077999939,
+      "n": 5,
+      "q1": 5.768826838000223,
+      "q3": 6.342274207000173,
+      "record_ids": [
+        "p2-041",
+        "p2-042",
+        "p2-043",
+        "p2-044",
+        "p2-045"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    },
+    {
+      "arm": "source_rust",
+      "experiment_count": 3,
+      "group": "standalone_resident",
+      "iqr": 0.005594909999672382,
+      "max": 1.4417352619998383,
+      "median": 1.4363877619998675,
+      "min": 1.4300792819999515,
+      "n": 5,
+      "q1": 1.4340964220000387,
+      "q3": 1.439691331999711,
+      "record_ids": [
+        "p2-046",
+        "p2-047",
+        "p2-048",
+        "p2-049",
+        "p2-050"
+      ],
+      "target_count": 18141,
+      "units": "seconds",
+      "workload": "original_three_experiments"
+    }
+  ],
+  "quartile_definition": "linear interpolation at (n - 1) * q; IQR = q3 - q1",
+  "ratios": {
+    "matched_B3_over_C0": 6.850886669740084,
+    "packaged_python_over_packed_load": 4.264520659110013
+  },
+  "record_count": 92,
+  "run_id": "phase2",
+  "schema_version": 1,
+  "standalone_memory": [
+    {
+      "arm": "source_python_fast",
+      "maximum_record_ids": [
+        "p2-045"
+      ],
+      "record_ids": [
+        "p2-041",
+        "p2-042",
+        "p2-043",
+        "p2-044",
+        "p2-045"
+      ],
+      "reduction": "maximum of five standalone resident sampled RSS peaks; one value, no distribution",
+      "value_bytes": 7975931904,
+      "value_gib": 7.428165435791016
+    },
+    {
+      "arm": "source_rust",
+      "maximum_record_ids": [
+        "p2-048",
+        "p2-049",
+        "p2-050"
+      ],
+      "record_ids": [
+        "p2-046",
+        "p2-047",
+        "p2-048",
+        "p2-049",
+        "p2-050"
+      ],
+      "reduction": "maximum of five standalone resident sampled RSS peaks; one value, no distribution",
+      "value_bytes": 11598581760,
+      "value_gib": 10.802021026611328
+    },
+    {
+      "arm": "packed_load",
+      "maximum_record_ids": [
+        "p2-033",
+        "p2-034"
+      ],
+      "record_ids": [
+        "p2-031",
+        "p2-032",
+        "p2-033",
+        "p2-034",
+        "p2-035"
+      ],
+      "reduction": "maximum of five standalone resident sampled RSS peaks; one value, no distribution",
+      "value_bytes": 11644203008,
+      "value_gib": 10.84450912475586
+    },
+    {
+      "arm": "packed_mmap",
+      "maximum_record_ids": [
+        "p2-038",
+        "p2-039"
+      ],
+      "record_ids": [
+        "p2-036",
+        "p2-037",
+        "p2-038",
+        "p2-039",
+        "p2-040"
+      ],
+      "reduction": "maximum of five standalone resident sampled RSS peaks; one value, no distribution",
+      "value_bytes": 11662770176,
+      "value_gib": 10.861801147460938
+    }
+  ]
+}

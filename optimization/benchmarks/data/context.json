@@ -1,0 +1,223 @@
+{
+  "export_policy": "Explicit field allowlist for supplemental context; operational paths, commands, epochs, session identifiers and logs omitted. Source SHA-256 retained.",
+  "records": {
+    "backend_contracts": {
+      "data": {
+        "cases_per_variant": 24,
+        "failed": [],
+        "oracle_contract_records": 120,
+        "passed": 120,
+        "source_files_unchanged": 36,
+        "status": "passed",
+        "variants": 5
+      },
+      "retained_fields": [
+        "cases_per_variant",
+        "variants",
+        "oracle_contract_records",
+        "passed",
+        "failed",
+        "source_files_unchanged",
+        "status"
+      ],
+      "source": "backend_regression/summary.json",
+      "source_sha256": "7df552d68fa00354d296d365d9d3d64f7f903daf443cdadaefc2aff5af720c5b"
+    },
+    "bundle_conversion": {
+      "data": {
+        "parent_launch_to_exit_seconds": 99.14520047899987,
+        "returncode": 0,
+        "standalone_peak_aggregate_rss_bytes": 3788808192,
+        "status": "completed"
+      },
+      "retained_fields": [
+        "status",
+        "returncode",
+        "parent_launch_to_exit_seconds",
+        "standalone_peak_aggregate_rss_bytes"
+      ],
+      "source": "bundle_conversion_process.json",
+      "source_sha256": "631971d9518b275ce9062e286032386db19a6190d02520105dfb7142329a12e5"
+    },
+    "bundle_metadata": {
+      "data": {
+        "abi_version": 1,
+        "format_version": 1,
+        "numeric_bytes": 3589582656,
+        "source_commit": "470477c4be6ba0095016a2089b9bbf33d49a1ef8"
+      },
+      "retained_fields": [
+        "format_version",
+        "abi_version",
+        "source_commit",
+        "numeric_bytes"
+      ],
+      "source": "native_bundle_manifest.json",
+      "source_sha256": "99f325dd2b0ec5e56b942c57cad063f4433a66f42c928e3b314a2265cb73861f"
+    },
+    "chunk_contracts": {
+      "data": {
+        "all_exact_or_same_exception_type": true,
+        "cases": 19,
+        "comparisons": 38,
+        "first_error_order_checked": true,
+        "models": 16,
+        "pending_owners_released_after_success_and_error": true
+      },
+      "retained_fields": [
+        "cases",
+        "comparisons",
+        "models",
+        "all_exact_or_same_exception_type",
+        "first_error_order_checked",
+        "pending_owners_released_after_success_and_error"
+      ],
+      "source": "chunk_comparison/contract_summary.json",
+      "source_sha256": "17f562caa9d7d199098b0e37c939d65f75708740ba18dd876c04c86950390cf4"
+    },
+    "chunk_protocol": {
+      "data": {
+        "aggregate_process_limit_bytes": 112152104140,
+        "allocation_counter_scope": "chunk1 core counts validation copies/output; chunked adds actual selection and descriptor allocations",
+        "boundary": "CSV parse through closed CSV output, no fsync",
+        "bundle_mode": "mmap",
+        "cache_limit_bytes": 17179869184,
+        "chunks": [
+          1,
+          64,
+          256
+        ],
+        "input_sha256": "70a782609134dca4b0e208b287f1116de3791e52b60178f7c86af840ffac0952",
+        "library_sha256": "164d3d99e7de38101170d507f29c8665626df5c41d0fdba54788251b100d101b",
+        "memory_class": "one shared fully prepared backend; identical source models and immutable arrays for every arm",
+        "reps": 5,
+        "seed": 20261005
+      },
+      "retained_fields": [
+        "input_sha256",
+        "library_sha256",
+        "chunks",
+        "reps",
+        "seed",
+        "boundary",
+        "memory_class",
+        "bundle_mode",
+        "aggregate_process_limit_bytes",
+        "cache_limit_bytes",
+        "allocation_counter_scope"
+      ],
+      "source": "chunk_comparison/protocol.json",
+      "source_sha256": "5adab29fe4f495645092770789ca44ebc5be108f069df4ab3c962df92848b7a5"
+    },
+    "full_expansion_status": {
+      "data": {
+        "completed_pilot_preserved": true,
+        "estimated_required_seconds": 557.4361615109383,
+        "full_requested": true,
+        "remaining_seconds": 463.9897451400757,
+        "state": "not_started"
+      },
+      "retained_fields": [
+        "state",
+        "remaining_seconds",
+        "estimated_required_seconds",
+        "full_requested",
+        "completed_pilot_preserved"
+      ],
+      "source": "workload_expansion/full_status.json",
+      "source_sha256": "9fc906315cfe2122bcf3994f8593366a1776d1162e6150ea69963ce70287149c"
+    },
+    "matched_protocol": {
+      "data": {
+        "aggregate_memory_limit_bytes": 112152104140,
+        "boundary": "CSV parse through closed CSV output; no fsync; UI/progress excluded",
+        "cache_budget_bytes": 17179869184,
+        "csv_index": true,
+        "experiments": [
+          "ACH-000030",
+          "ACH-000615",
+          "ACH-001042"
+        ],
+        "input_sha256": "70a782609134dca4b0e208b287f1116de3791e52b60178f7c86af840ffac0952",
+        "library_sha256": "a8ad25696e4bcd25ce86f31ee453a7914a77bd89a598cbe01aabe153c58f3786",
+        "mode": "paired",
+        "seed": 20261005
+      },
+      "retained_fields": [
+        "experiments",
+        "csv_index",
+        "aggregate_memory_limit_bytes",
+        "cache_budget_bytes",
+        "boundary",
+        "seed",
+        "input_sha256",
+        "library_sha256",
+        "mode"
+      ],
+      "source": "historical_pair/protocol.json",
+      "source_sha256": "e9c499f9b02aedb8dc78b2ca125b2d7ee7bc090f4fe493ee0db00ec3251bf9fa"
+    },
+    "matrix_audit": {
+      "data": {
+        "all_matrices_exact": true,
+        "classification": "validation only; no models loaded or inference performed",
+        "feature_width_counts": {
+          "1": 7,
+          "10": 12162,
+          "2": 20,
+          "3": 73,
+          "4": 231,
+          "5": 508,
+          "6": 762,
+          "7": 1134,
+          "8": 1462,
+          "9": 1782
+        },
+        "target_count": 18141,
+        "wall_seconds": 17.793984828000248
+      },
+      "retained_fields": [
+        "target_count",
+        "all_matrices_exact",
+        "feature_width_counts",
+        "wall_seconds",
+        "classification"
+      ],
+      "source": "full_matrix_audit/summary.json",
+      "source_sha256": "37b71fb9f28e92d4033687bd3bbd1db3dd658c8df0c2b89714d62ad5fbfafac9"
+    },
+    "original_protocol": {
+      "data": {
+        "aggregate_memory_limit_bytes": 112152104140,
+        "boundary": "CSV parse through closed CSV output; no fsync; UI/progress excluded",
+        "cache_budget_bytes": 17179869184,
+        "csv_index": true,
+        "experiments": [
+          "ACH-000030",
+          "ACH-000615",
+          "ACH-001042"
+        ],
+        "input_sha256": "70a782609134dca4b0e208b287f1116de3791e52b60178f7c86af840ffac0952",
+        "library_sha256": "a8ad25696e4bcd25ce86f31ee453a7914a77bd89a598cbe01aabe153c58f3786",
+        "mode": "original",
+        "seed": 20261005
+      },
+      "retained_fields": [
+        "experiments",
+        "csv_index",
+        "aggregate_memory_limit_bytes",
+        "cache_budget_bytes",
+        "boundary",
+        "seed",
+        "input_sha256",
+        "library_sha256",
+        "mode"
+      ],
+      "source": "original_full/protocol.json",
+      "source_sha256": "cfe78117becb67952a45397c1ab4138d20539dc871006863430c211bab7f4de9"
+    }
+  },
+  "run_id": "phase2",
+  "schema_version": 1,
+  "source_commit": "470477c4be6ba0095016a2089b9bbf33d49a1ef8"
+}

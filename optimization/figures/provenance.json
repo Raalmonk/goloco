@@ -1,0 +1,258 @@
+{
+  "figures": [
+    {
+      "data_file": "../benchmarks/data/phase2_timings.jsonl",
+      "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+      "figure": "matched_residency",
+      "filters": {
+        "arms": [
+          "B3",
+          "C0"
+        ],
+        "experiment_count": 3,
+        "groups": [
+          "matched_resident"
+        ],
+        "run_id": "phase2",
+        "target_count": 18141
+      },
+      "formula": "all observations; median; Q1 and Q3 by linear interpolation at (n-1)*q; ratio of unrounded arm medians",
+      "measurement_fields": [
+        "record.wall_seconds"
+      ],
+      "original_source_sha256": {
+        "historical_pair/timings.jsonl": "b4ee3aa7215e40728c8e9187dcac2efcb604437a5380ac1a8123487b3f004e00"
+      },
+      "record_ids": [
+        "p2-016",
+        "p2-017",
+        "p2-018",
+        "p2-019",
+        "p2-020",
+        "p2-021",
+        "p2-022",
+        "p2-023",
+        "p2-024",
+        "p2-025"
+      ],
+      "source_files": [
+        "historical_pair/timings.jsonl"
+      ],
+      "timing_boundary": "CSV parsing through closed/flushed original-schema CSV; no fsync; source models and adapters already resident; correctness outside timing",
+      "units": "seconds"
+    },
+    {
+      "data_file": "../benchmarks/data/phase2_timings.jsonl",
+      "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+      "figure": "reusable_resident",
+      "filters": {
+        "arms": [
+          "packed_load",
+          "packed_mmap",
+          "source_python_fast",
+          "source_rust"
+        ],
+        "experiment_count": 3,
+        "groups": [
+          "standalone_resident"
+        ],
+        "run_id": "phase2",
+        "target_count": 18141
+      },
+      "formula": "all observations; median; Q1 and Q3 by linear interpolation at (n-1)*q; ratio of unrounded arm medians",
+      "measurement_fields": [
+        "record.wall_seconds"
+      ],
+      "original_source_sha256": {
+        "lifecycle/packed_load_0/resident_timings.jsonl": "e33edfafc9c45b3ee79b711bcf61d9e06bcb88e802cd7afda677a8a8f631a9e3",
+        "lifecycle/packed_mmap_0/resident_timings.jsonl": "99456bfef45988b2f6d328bbb128f139537ec3e44ada1d5e4c980fd6f3b1413c",
+        "lifecycle/source_python_fast_0/resident_timings.jsonl": "9e5af836d216f274ef46993e1c2ecfd90e1f661e3b9507771219ff0c0240fd4e",
+        "lifecycle/source_rust_0/resident_timings.jsonl": "0ce499b2cd2845ec6a7c12281834c8170f5f48797f2ed36c62c5a4a8541fbb60"
+      },
+      "record_ids": [
+        "p2-031",
+        "p2-032",
+        "p2-033",
+        "p2-034",
+        "p2-035",
+        "p2-036",
+        "p2-037",
+        "p2-038",
+        "p2-039",
+        "p2-040",
+        "p2-041",
+        "p2-042",
+        "p2-043",
+        "p2-044",
+        "p2-045",
+        "p2-046",
+        "p2-047",
+        "p2-048",
+        "p2-049",
+        "p2-050"
+      ],
+      "source_files": [
+        "lifecycle/packed_load_0/resident_timings.jsonl",
+        "lifecycle/packed_mmap_0/resident_timings.jsonl",
+        "lifecycle/source_python_fast_0/resident_timings.jsonl",
+        "lifecycle/source_rust_0/resident_timings.jsonl"
+      ],
+      "timing_boundary": "CSV parsing through closed/flushed original-schema CSV; no fsync; source models and adapters already resident; correctness outside timing",
+      "units": "seconds"
+    },
+    {
+      "data_file": "../benchmarks/data/phase2_timings.jsonl",
+      "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+      "figure": "startup_latency",
+      "filters": {
+        "arms": [
+          "packed_load",
+          "packed_mmap",
+          "source_python_fast",
+          "source_rust"
+        ],
+        "experiment_count": 3,
+        "groups": [
+          "process_first_output"
+        ],
+        "run_id": "phase2",
+        "target_count": 18141
+      },
+      "formula": "all observations; median; Q1 and Q3 by linear interpolation at (n-1)*q",
+      "measurement_fields": [
+        "record.wall_seconds"
+      ],
+      "original_source_sha256": {
+        "lifecycle/timings.jsonl": "72e523604cac36f827b28e5e3129be57c9be23f0977c8e7d0cecd3c766b86235"
+      },
+      "record_ids": [
+        "p2-051",
+        "p2-052",
+        "p2-053",
+        "p2-054",
+        "p2-056",
+        "p2-057",
+        "p2-058",
+        "p2-060",
+        "p2-061",
+        "p2-062",
+        "p2-064",
+        "p2-065"
+      ],
+      "source_files": [
+        "lifecycle/timings.jsonl"
+      ],
+      "timing_boundary": "parent before Popen through first CSV-close event receipt; no fsync",
+      "units": "seconds"
+    },
+    {
+      "data_file": "../benchmarks/data/phase2_timings.jsonl",
+      "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+      "figure": "standalone_memory",
+      "filters": {
+        "arms": [
+          "packed_load",
+          "packed_mmap",
+          "source_python_fast",
+          "source_rust"
+        ],
+        "experiment_count": 3,
+        "groups": [
+          "standalone_resident"
+        ],
+        "run_id": "phase2",
+        "target_count": 18141
+      },
+      "formula": "maximum(sampled_peak_rss_bytes) / 2^30 per standalone arm",
+      "measurement_fields": [
+        "record.memory.sampled_peak_rss_bytes"
+      ],
+      "original_source_sha256": {
+        "lifecycle/packed_load_0/resident_timings.jsonl": "e33edfafc9c45b3ee79b711bcf61d9e06bcb88e802cd7afda677a8a8f631a9e3",
+        "lifecycle/packed_mmap_0/resident_timings.jsonl": "99456bfef45988b2f6d328bbb128f139537ec3e44ada1d5e4c980fd6f3b1413c",
+        "lifecycle/source_python_fast_0/resident_timings.jsonl": "9e5af836d216f274ef46993e1c2ecfd90e1f661e3b9507771219ff0c0240fd4e",
+        "lifecycle/source_rust_0/resident_timings.jsonl": "0ce499b2cd2845ec6a7c12281834c8170f5f48797f2ed36c62c5a4a8541fbb60"
+      },
+      "record_ids": [
+        "p2-031",
+        "p2-032",
+        "p2-033",
+        "p2-034",
+        "p2-035",
+        "p2-036",
+        "p2-037",
+        "p2-038",
+        "p2-039",
+        "p2-040",
+        "p2-041",
+        "p2-042",
+        "p2-043",
+        "p2-044",
+        "p2-045",
+        "p2-046",
+        "p2-047",
+        "p2-048",
+        "p2-049",
+        "p2-050"
+      ],
+      "source_files": [
+        "lifecycle/packed_load_0/resident_timings.jsonl",
+        "lifecycle/packed_mmap_0/resident_timings.jsonl",
+        "lifecycle/source_python_fast_0/resident_timings.jsonl",
+        "lifecycle/source_rust_0/resident_timings.jsonl"
+      ],
+      "timing_boundary": "per-resident-request sampled RSS; maximum over five requests",
+      "units": "GiB"
+    },
+    {
+      "data_file": "../benchmarks/data/phase2_timings.jsonl",
+      "data_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+      "figure": "negative_chunking",
+      "filters": {
+        "arms": [
+          "chunk1",
+          "chunk256",
+          "chunk64"
+        ],
+        "experiment_count": 3,
+        "groups": [
+          "chunk_resident"
+        ],
+        "run_id": "phase2",
+        "target_count": 18141
+      },
+      "formula": "all observations; median; Q1 and Q3 by linear interpolation at (n-1)*q",
+      "measurement_fields": [
+        "record.wall_seconds",
+        "record.diagnostics.ffi_calls"
+      ],
+      "original_source_sha256": {
+        "chunk_comparison/timings.jsonl": "c1c8d91a5a2cf5c17fead878f330f244cc6693a30bc6cacea1b14031cc11d7b9"
+      },
+      "record_ids": [
+        "p2-001",
+        "p2-002",
+        "p2-003",
+        "p2-004",
+        "p2-005",
+        "p2-006",
+        "p2-007",
+        "p2-008",
+        "p2-009",
+        "p2-010",
+        "p2-011",
+        "p2-012",
+        "p2-013",
+        "p2-014",
+        "p2-015"
+      ],
+      "source_files": [
+        "chunk_comparison/timings.jsonl"
+      ],
+      "timing_boundary": "CSV parsing through closed/flushed original-schema CSV; no fsync; source models and adapters already resident; correctness outside timing",
+      "units": "seconds"
+    }
+  ],
+  "schema_version": 1,
+  "source_consolidated_sha256": "77f02912b17481b5f7872fe47f5ad35a5608cb0e8d122af671fd988631565b92"
+}

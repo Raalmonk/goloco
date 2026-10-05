@@ -1,3 +1,15 @@
+## Independent CPU inference and reproducibility contribution
+
+This fork adds an independent performance study and reusable inference backend for GOLOCO. It is not an official Pritchard-lab release. The original application and documentation are preserved below.
+
+[Contribution and usage](optimization/README.md) · [Measured results](optimization/docs/RESULTS.md) · [Figures and reproduction](optimization/figures/README.md) · [Upstream attribution](optimization/docs/ATTRIBUTION.md)
+
+[![Five matched-residency observations per implementation: median 6.367 seconds for B3 Python and 0.929 seconds for the existing C0 Rust kernel, a 6.85-fold ratio. This is a replication of the earlier Rust comparison.](optimization/figures/matched_residency.png)](optimization/figures/matched_residency.svg)
+
+The packaged backend has a separate 4.26× resident comparison. First use remains slower than Python-fast, source models are still required, and the slower chunking experiment is retained in the results.
+
+---
+
 # goloco
 
 goloco is a bioinformatics web application designed to enable genome-wide CRISPR loss-of-function predictions with small scale experiments of 100-1000 sgRNA subsets powered by lossy compression models. 

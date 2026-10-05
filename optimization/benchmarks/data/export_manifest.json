@@ -1,0 +1,379 @@
+{
+  "added_fields": {
+    "accepted_first_output_id": "trial 0 same-arm accepted direct comparison for resident records",
+    "correctness_relation": "direct, linked, or oracle; never upgraded",
+    "experiment_count": "raw count or original protocol/workload",
+    "group": "measurement boundary class derived from source label",
+    "id": "p2-NNN, original consolidated line number",
+    "run_id": "single accepted Phase 2 allocation; no operational session identifier",
+    "source_line_sha256": "SHA-256 of exact original source JSONL line without newline",
+    "target_count": "raw count or correctness rows",
+    "workload": "raw workload or original_three_experiments"
+  },
+  "preservation": "All raw numeric values, counters, arrays, correctness flags and other record fields retained. Only 50 model_bundle path strings replaced. No timing samples removed or added.",
+  "public_file": "phase2_timings.jsonl",
+  "public_sha256": "2df607d39f7566eff8301851c7f7e41da68fd7433de535d831258e77bc9d2614",
+  "record_count": 92,
+  "redactions": [
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-001",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-001",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-002",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-002",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-003",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-003",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-004",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-004",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-005",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-005",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-006",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-006",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-007",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-007",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-008",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-008",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-009",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-009",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-010",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-010",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-011",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-011",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-012",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-012",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-013",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-013",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-014",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-014",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-015",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-015",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-031",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-031",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-032",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-032",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-033",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-033",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-034",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-034",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-035",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-035",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-036",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-036",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-037",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-037",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-038",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-038",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-039",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-039",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_before/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-040",
+      "replacement": "artifact:native_bundle"
+    },
+    {
+      "json_pointer": "/record/cache_after/model_bundle",
+      "operation": "absolute artifact path replaced with semantic artifact identifier",
+      "record_id": "p2-040",
+      "replacement": "artifact:native_bundle"
+    }
+  ],
+  "schema_version": 1,
+  "source_file": "phase2_raw_timings.jsonl",
+  "source_files": {
+    "chunk_comparison/timings.jsonl": {
+      "records_in_export": 15,
+      "sha256": "c1c8d91a5a2cf5c17fead878f330f244cc6693a30bc6cacea1b14031cc11d7b9"
+    },
+    "historical_pair/timings.jsonl": {
+      "records_in_export": 10,
+      "sha256": "b4ee3aa7215e40728c8e9187dcac2efcb604437a5380ac1a8123487b3f004e00"
+    },
+    "lifecycle/historical_c0_0/resident_timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "f65668165dd1e7f63b7a49ffeb5c8fb37700266a6830cde23f2e234f37217b8b"
+    },
+    "lifecycle/packed_load_0/resident_timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "e33edfafc9c45b3ee79b711bcf61d9e06bcb88e802cd7afda677a8a8f631a9e3"
+    },
+    "lifecycle/packed_mmap_0/resident_timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "99456bfef45988b2f6d328bbb128f139537ec3e44ada1d5e4c980fd6f3b1413c"
+    },
+    "lifecycle/source_python_fast_0/resident_timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "9e5af836d216f274ef46993e1c2ecfd90e1f661e3b9507771219ff0c0240fd4e"
+    },
+    "lifecycle/source_rust_0/resident_timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "0ce499b2cd2845ec6a7c12281834c8170f5f48797f2ed36c62c5a4a8541fbb60"
+    },
+    "lifecycle/timings.jsonl": {
+      "records_in_export": 15,
+      "sha256": "72e523604cac36f827b28e5e3129be57c9be23f0977c8e7d0cecd3c766b86235"
+    },
+    "original_full/timings.jsonl": {
+      "records_in_export": 5,
+      "sha256": "e5e2cc876c1979471090441139b04c4622f7dcf809d8e56326fffc5835db1d70"
+    },
+    "workload_expansion/pilot/original_timings.jsonl": {
+      "records_in_export": 2,
+      "sha256": "07a31cb335ad9a1aa0579c8a6c9946a639935db93de0ce0aac102e83420ba2e0"
+    },
+    "workload_expansion/pilot/timings.jsonl": {
+      "records_in_export": 20,
+      "sha256": "bee5d9ef95b1f5d68ee62a907302c20e90205421e29bece5783d52dd4c94f618"
+    }
+  },
+  "source_sha256": "77f02912b17481b5f7872fe47f5ad35a5608cb0e8d122af671fd988631565b92",
+  "supplemental_derivatives": {
+    "context.json": {
+      "classification": "allowlisted historical protocol, conversion receipt, metadata and validation facts",
+      "sha256": "c7722640535be7920937656a8e66c338492d08d5d5b2fa6b470b61cf49fdd5c7"
+    },
+    "validation_summary.json": {
+      "classification": "historical model-dependent validation summaries; no new timed inference samples",
+      "derivation": "Per-source hashes, allowlisted fields and extraction rules are recorded inside validation_summary.json. Original raw logs are not published.",
+      "sha256": "fa5f34a93448485dee38cf258fdce24b7081e328cf27e6c237dfa9191edffda9"
+    }
+  }
+}

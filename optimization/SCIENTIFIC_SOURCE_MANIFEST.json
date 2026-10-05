@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "accepted_run": "phase2",
+  "tested_upstream_commit": "470477c4be6ba0095016a2089b9bbf33d49a1ef8",
+  "validation": "Historical Colab execution; publication check is source bytes plus Python AST only",
+  "files": [
+    {
+      "path": "goloco_reusable/__init__.py",
+      "accepted_sha256": "fcc2b1502d36bbbb00a85a5102a7aede0e92e8b0ee97b4af88125ac624083638",
+      "published_sha256": "fcc2b1502d36bbbb00a85a5102a7aede0e92e8b0ee97b4af88125ac624083638",
+      "bytes": 242,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/__main__.py",
+      "accepted_sha256": "f38fd2f2c920c29c828645e87ed64743d567aaaef7fba7a15d2c7d7f8094f91f",
+      "published_sha256": "f38fd2f2c920c29c828645e87ed64743d567aaaef7fba7a15d2c7d7f8094f91f",
+      "bytes": 61,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/backend.py",
+      "accepted_sha256": "79693c224ac3f1678805fbeb1b3f51edc0e78ecd4375d69adb9157aa1ac888b9",
+      "published_sha256": "79693c224ac3f1678805fbeb1b3f51edc0e78ecd4375d69adb9157aa1ac888b9",
+      "bytes": 19884,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/bundle.py",
+      "accepted_sha256": "5b4bf79e9adfd330e83ffb199f5637cebbd2db89f3ab45fb9c4d9902fd08ff30",
+      "published_sha256": "5b4bf79e9adfd330e83ffb199f5637cebbd2db89f3ab45fb9c4d9902fd08ff30",
+      "bytes": 26404,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/chunk.py",
+      "accepted_sha256": "06a209727593124a5c0b6764d4b4466f5f929f5fc1976149789641d14ba726d3",
+      "published_sha256": "06a209727593124a5c0b6764d4b4466f5f929f5fc1976149789641d14ba726d3",
+      "bytes": 13861,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/cli.py",
+      "accepted_sha256": "83e0c73a03b5ed9e18047e0948225e9efad0babc897b597c9ac9c4e188b27165",
+      "published_sha256": "83e0c73a03b5ed9e18047e0948225e9efad0babc897b597c9ac9c4e188b27165",
+      "bytes": 9745,
+      "change": "none"
+    },
+    {
+      "path": "goloco_reusable/native.py",
+      "accepted_sha256": "488a6de284b47a6f3017f171e5cd652fc5c2470c26ec1d0cd8e910a40d9de495",
+      "published_sha256": "488a6de284b47a6f3017f171e5cd652fc5c2470c26ec1d0cd8e910a40d9de495",
+      "bytes": 7645,
+      "change": "none"
+    },
+    {
+      "path": "rust/Cargo.lock",
+      "accepted_sha256": "eef62d596076da086a68ef4244772ba0426ee56b3c41aa0d0677c959ed7f8877",
+      "published_sha256": "eef62d596076da086a68ef4244772ba0426ee56b3c41aa0d0677c959ed7f8877",
+      "bytes": 157,
+      "change": "none"
+    },
+    {
+      "path": "rust/Cargo.toml",
+      "accepted_sha256": "710fbdafb7a816381ae6eb38d858bd2c2bf42494a570d08e9e7e37b315f7ae23",
+      "published_sha256": "710fbdafb7a816381ae6eb38d858bd2c2bf42494a570d08e9e7e37b315f7ae23",
+      "bytes": 179,
+      "change": "none"
+    },
+    {
+      "path": "rust/src/lib.rs",
+      "accepted_sha256": "7c444d79a48f579e634637c232b160b8452c5b041c5d7fe531b85bb0751e95ed",
+      "published_sha256": "7c444d79a48f579e634637c232b160b8452c5b041c5d7fe531b85bb0751e95ed",
+      "bytes": 7763,
+      "change": "none"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "accepted_sha256": "373180cfaf3e2a1aace41191c811de5f20cf274f823a23ade9c4216fff76f243",
+      "published_sha256": "373180cfaf3e2a1aace41191c811de5f20cf274f823a23ade9c4216fff76f243",
+      "bytes": 11872,
+      "change": "none"
+    },
+    {
+      "path": "reference/edge_validation_native.py",
+      "accepted_sha256": "024304ec00aa6bfa34a22839b88c319b25bf811c0437d1f174461ddcb9fd5486",
+      "published_sha256": "024304ec00aa6bfa34a22839b88c319b25bf811c0437d1f174461ddcb9fd5486",
+      "bytes": 11512,
+      "change": "none"
+    },
+    {
+      "path": "reference/goloco_benchmark.py",
+      "accepted_sha256": "f0b73c7a26266d0d6623b440cb67ceac7624a91d9b72d7ac9d807825ac8393bc",
+      "published_sha256": "f0b73c7a26266d0d6623b440cb67ceac7624a91d9b72d7ac9d807825ac8393bc",
+      "bytes": 39100,
+      "change": "none"
+    },
+    {
+      "path": "reference/goloco_experiment.py",
+      "accepted_sha256": "f103bbcf09ddb4ac014728fe39e66c26133a6369b3109f1882a50975db7a3024",
+      "published_sha256": "f103bbcf09ddb4ac014728fe39e66c26133a6369b3109f1882a50975db7a3024",
+      "bytes": 22918,
+      "change": "none"
+    },
+    {
+      "path": "reference/native_candidate.py",
+      "accepted_sha256": "fa4b65f3a80efd438c156c9c8308d43781392cf717f41754fd5678e1a5c53871",
+      "published_sha256": "fa4b65f3a80efd438c156c9c8308d43781392cf717f41754fd5678e1a5c53871",
+      "bytes": 11171,
+      "change": "none"
+    },
+    {
+      "path": "reference/rust_candidate.py",
+      "accepted_sha256": "95f51e6d0571c7be9803adba9d71a89758e4bea51a245cd258a381860887ce1f",
+      "published_sha256": "95f51e6d0571c7be9803adba9d71a89758e4bea51a245cd258a381860887ce1f",
+      "bytes": 14299,
+      "change": "none"
+    },
+    {
+      "path": "reference/supplemental_validation.py",
+      "accepted_sha256": "c4c10a8b0df91715c27c9814176a09c1e6234539a441aab5aaa4615cbce050d1",
+      "published_sha256": "c4c10a8b0df91715c27c9814176a09c1e6234539a441aab5aaa4615cbce050d1",
+      "bytes": 20938,
+      "change": "none"
+    },
+    {
+      "path": "experiments/chunk_comparison.py",
+      "accepted_sha256": "22ad03fb4fe0d218a845e639d7cdf883fe8a77cb6ff1507a4674af0653b50c03",
+      "published_sha256": "22ad03fb4fe0d218a845e639d7cdf883fe8a77cb6ff1507a4674af0653b50c03",
+      "bytes": 21056,
+      "change": "none"
+    },
+    {
+      "path": "experiments/lifecycle_worker.py",
+      "accepted_sha256": "65ed1033fc223a5617f8c623a34c6e792a7e71bc11789c70d40ef96394ef00af",
+      "published_sha256": "65ed1033fc223a5617f8c623a34c6e792a7e71bc11789c70d40ef96394ef00af",
+      "bytes": 6929,
+      "change": "none"
+    },
+    {
+      "path": "experiments/profile_native.py",
+      "accepted_sha256": "c2cf65a91e78549adde10597140fa0c9ff8f022241d106957d517c3df8dec8c1",
+      "published_sha256": "c2cf65a91e78549adde10597140fa0c9ff8f022241d106957d517c3df8dec8c1",
+      "bytes": 7806,
+      "change": "none"
+    },
+    {
+      "path": "experiments/regression.py",
+      "accepted_sha256": "ce78ed6cf84d881b74b13f96b47cfaa4b028cdd4bf64ca1f253e9aae82e284d3",
+      "published_sha256": "ce78ed6cf84d881b74b13f96b47cfaa4b028cdd4bf64ca1f253e9aae82e284d3",
+      "bytes": 18445,
+      "change": "none"
+    },
+    {
+      "path": "experiments/run_phase2.py",
+      "accepted_sha256": "656c00d956a06545e2ef319c4c6537dc873a6f5bbf6fa86fba3e4fc00d2a81cb",
+      "published_sha256": "656c00d956a06545e2ef319c4c6537dc873a6f5bbf6fa86fba3e4fc00d2a81cb",
+      "bytes": 17704,
+      "change": "none"
+    },
+    {
+      "path": "experiments/workload_expansion.py",
+      "accepted_sha256": "52fe41adc3b348d403fe7a363892615d0cb44487f8238df66eb26aa6bc7221f8",
+      "published_sha256": "52fe41adc3b348d403fe7a363892615d0cb44487f8238df66eb26aa6bc7221f8",
+      "bytes": 12454,
+      "change": "none"
+    },
+    {
+      "path": "evidence/canonical_targets.json",
+      "accepted_sha256": "6b4f8fdfb0af5485a832567a44957089b799c815700cab9714b31e1fba14185a",
+      "published_sha256": "6b4f8fdfb0af5485a832567a44957089b799c815700cab9714b31e1fba14185a",
+      "bytes": 207082,
+      "change": "none"
+    },
+    {
+      "path": "evidence/core_targets.json",
+      "accepted_sha256": "4405e57ef4c4dac629ca13c30187286c93c0b509744236e87224487eeea68892",
+      "published_sha256": "4405e57ef4c4dac629ca13c30187286c93c0b509744236e87224487eeea68892",
+      "bytes": 11677,
+      "change": "none"
+    },
+    {
+      "path": "environments/inference.lock.txt",
+      "accepted_source": "requirements.lock.txt",
+      "accepted_sha256": "de59b02c1f1eea6a3088b88bbf8e3a28003342b50c57da655f61f95d322ebf33",
+      "published_sha256": "de59b02c1f1eea6a3088b88bbf8e3a28003342b50c57da655f61f95d322ebf33",
+      "bytes": 242,
+      "change": "path only"
+    }
+  ]
+}

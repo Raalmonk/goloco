@@ -1,0 +1,399 @@
+{
+  "classification": "Historical model-dependent validation; no new model execution during publication",
+  "entries": {
+    "backend_contracts": {
+      "data": {
+        "cases_per_variant": 24,
+        "failed": [],
+        "oracle_contract_records": 120,
+        "passed": 120,
+        "source_files_unchanged": 36,
+        "status": "passed",
+        "variants": 5
+      },
+      "retained_fields": "all",
+      "source_file": "results/backend_regression/summary.json",
+      "source_sha256": "7df552d68fa00354d296d365d9d3d64f7f903daf443cdadaefc2aff5af720c5b"
+    },
+    "backend_lifecycle": {
+      "count": 45,
+      "omitted_fields": "Before/after snapshots, source filenames, exception details, detailed comparisons and diagnostics; no timing measurements used in figures.",
+      "passed": 45,
+      "records": [
+        {
+          "models": 16,
+          "operation": "estimator_state_unchanged",
+          "passed": true,
+          "record_number": 1,
+          "variant": "numpy"
+        },
+        {
+          "operation": "single_caller_rejection",
+          "passed": true,
+          "record_number": 2,
+          "variant": "numpy"
+        },
+        {
+          "operation": "invalidate_one",
+          "passed": true,
+          "record_number": 3,
+          "variant": "numpy"
+        },
+        {
+          "operation": "invalidate_all",
+          "passed": true,
+          "record_number": 4,
+          "variant": "numpy"
+        },
+        {
+          "operation": "gc_lifetime",
+          "passed": true,
+          "record_number": 5,
+          "variant": "numpy"
+        },
+        {
+          "operation": "close_reopen",
+          "passed": true,
+          "record_number": 6,
+          "variant": "numpy"
+        },
+        {
+          "models": 16,
+          "operation": "estimator_state_unchanged",
+          "passed": true,
+          "record_number": 7,
+          "variant": "python_fast"
+        },
+        {
+          "operation": "single_caller_rejection",
+          "passed": true,
+          "record_number": 8,
+          "variant": "python_fast"
+        },
+        {
+          "operation": "invalidate_one",
+          "passed": true,
+          "record_number": 9,
+          "variant": "python_fast"
+        },
+        {
+          "operation": "invalidate_all",
+          "passed": true,
+          "record_number": 10,
+          "variant": "python_fast"
+        },
+        {
+          "operation": "gc_lifetime",
+          "passed": true,
+          "record_number": 11,
+          "variant": "python_fast"
+        },
+        {
+          "operation": "close_reopen",
+          "passed": true,
+          "record_number": 12,
+          "variant": "python_fast"
+        },
+        {
+          "models": 16,
+          "operation": "estimator_state_unchanged",
+          "passed": true,
+          "record_number": 13,
+          "variant": "rust"
+        },
+        {
+          "operation": "single_caller_rejection",
+          "passed": true,
+          "record_number": 14,
+          "variant": "rust"
+        },
+        {
+          "operation": "invalidate_one",
+          "passed": true,
+          "record_number": 15,
+          "variant": "rust"
+        },
+        {
+          "operation": "invalidate_all",
+          "passed": true,
+          "record_number": 16,
+          "variant": "rust"
+        },
+        {
+          "operation": "gc_lifetime",
+          "passed": true,
+          "record_number": 17,
+          "variant": "rust"
+        },
+        {
+          "operation": "close_reopen",
+          "passed": true,
+          "record_number": 18,
+          "variant": "rust"
+        },
+        {
+          "models": 16,
+          "operation": "estimator_state_unchanged",
+          "passed": true,
+          "record_number": 19,
+          "variant": "packed_load"
+        },
+        {
+          "operation": "single_caller_rejection",
+          "passed": true,
+          "record_number": 20,
+          "variant": "packed_load"
+        },
+        {
+          "operation": "invalidate_one",
+          "passed": true,
+          "record_number": 21,
+          "variant": "packed_load"
+        },
+        {
+          "operation": "invalidate_all",
+          "passed": true,
+          "record_number": 22,
+          "variant": "packed_load"
+        },
+        {
+          "operation": "gc_lifetime",
+          "passed": true,
+          "record_number": 23,
+          "variant": "packed_load"
+        },
+        {
+          "operation": "close_reopen",
+          "passed": true,
+          "record_number": 24,
+          "variant": "packed_load"
+        },
+        {
+          "models": 16,
+          "operation": "estimator_state_unchanged",
+          "passed": true,
+          "record_number": 25,
+          "variant": "packed_mmap"
+        },
+        {
+          "operation": "single_caller_rejection",
+          "passed": true,
+          "record_number": 26,
+          "variant": "packed_mmap"
+        },
+        {
+          "operation": "invalidate_one",
+          "passed": true,
+          "record_number": 27,
+          "variant": "packed_mmap"
+        },
+        {
+          "operation": "invalidate_all",
+          "passed": true,
+          "record_number": 28,
+          "variant": "packed_mmap"
+        },
+        {
+          "operation": "gc_lifetime",
+          "passed": true,
+          "record_number": 29,
+          "variant": "packed_mmap"
+        },
+        {
+          "operation": "close_reopen",
+          "passed": true,
+          "record_number": 30,
+          "variant": "packed_mmap"
+        },
+        {
+          "case": "explicit_unavailable_rust",
+          "passed": true,
+          "record_number": 31
+        },
+        {
+          "case": "explicit_unavailable___UNKNOWN_BACKEND__",
+          "passed": true,
+          "record_number": 32
+        },
+        {
+          "budget_bytes": 2591855,
+          "case": "bounded_cache_eviction",
+          "passed": true,
+          "record_number": 33,
+          "variant": "numpy"
+        },
+        {
+          "budget_bytes": 2591855,
+          "case": "bounded_cache_eviction",
+          "passed": true,
+          "record_number": 34,
+          "variant": "python_fast"
+        },
+        {
+          "budget_bytes": 2818799,
+          "case": "bounded_cache_eviction",
+          "passed": true,
+          "record_number": 35,
+          "variant": "rust"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 36,
+          "variant": "numpy"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 37,
+          "variant": "numpy"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 38,
+          "variant": "python_fast"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 39,
+          "variant": "python_fast"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 40,
+          "variant": "rust"
+        },
+        {
+          "case": "changed_source_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 41,
+          "variant": "rust"
+        },
+        {
+          "case": "bundle_rejects_changed_source_even_after_invalidation",
+          "passed": true,
+          "record_number": 42
+        },
+        {
+          "case": "changed_metadata_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 43,
+          "variant": "numpy"
+        },
+        {
+          "case": "changed_metadata_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 44,
+          "variant": "python_fast"
+        },
+        {
+          "case": "changed_metadata_reject_then_invalidate_reload",
+          "passed": true,
+          "record_number": 45,
+          "variant": "rust"
+        }
+      ],
+      "retained_fields": [
+        "variant",
+        "operation",
+        "case",
+        "passed",
+        "models",
+        "budget_bytes"
+      ],
+      "source_file": "results/backend_regression/lifecycle.jsonl",
+      "source_sha256": "d1b3b9e2d5b5b697d57e5b191ea17d2b221a75f9968b6b2f71242f55f6429599"
+    },
+    "bundle_unit_tests": {
+      "count": 18,
+      "extraction": "Only unittest terminal test count and final OK status; raw log not published.",
+      "passed": true,
+      "source_file": "logs/bundle_unit_tests.log",
+      "source_sha256": "7deaa850d738e28d939501d43965ffe11a26ac2515d3913b471606571964145c"
+    },
+    "chunk_contracts": {
+      "data": {
+        "all_exact_or_same_exception_type": true,
+        "cases": 19,
+        "comparisons": 38,
+        "first_error_order_checked": true,
+        "models": 16,
+        "pending_owners_released_after_success_and_error": true,
+        "selected_row": 15,
+        "unused_row": 0
+      },
+      "retained_fields": "all",
+      "source_file": "results/chunk_comparison/contract_summary.json",
+      "source_sha256": "17f562caa9d7d199098b0e37c939d65f75708740ba18dd876c04c86950390cf4"
+    },
+    "full_matrix_audit": {
+      "data": {
+        "all_matrices_exact": true,
+        "classification": "validation only; no models loaded or inference performed",
+        "feature_width_counts": {
+          "1": 7,
+          "10": 12162,
+          "2": 20,
+          "3": 73,
+          "4": 231,
+          "5": 508,
+          "6": 762,
+          "7": 1134,
+          "8": 1462,
+          "9": 1782
+        },
+        "target_count": 18141,
+        "wall_seconds": 17.793984828000248
+      },
+      "retained_fields": "all",
+      "source_file": "results/full_matrix_audit/summary.json",
+      "source_sha256": "37b71fb9f28e92d4033687bd3bbd1db3dd658c8df0c2b89714d62ad5fbfafac9"
+    },
+    "native_boundaries": {
+      "data": {
+        "atol": 1e-08,
+        "every_valid_comparison_exact": true,
+        "failures": [],
+        "passed": true,
+        "rtol": 1e-07,
+        "status": "complete",
+        "tested_models": 16,
+        "totals": {
+          "invalid_cases": 112,
+          "probe_rows": 7650,
+          "root_thresholds": 1530,
+          "valid_cases": 128
+        }
+      },
+      "retained_fields": "all",
+      "source_file": "results/historical_native_edges/summary.json",
+      "source_sha256": "2055e16e9dcd787025c2df323bdd9e86a7200abebb61cd130f1ae050a5882c13"
+    },
+    "supplemental": {
+      "data": {
+        "atol": 1e-08,
+        "case_count": 15,
+        "failures": [],
+        "passed": true,
+        "rtol": 1e-07,
+        "seed": 20261005,
+        "state": "complete"
+      },
+      "retained_fields": [
+        "state",
+        "passed",
+        "failures",
+        "case_count",
+        "atol",
+        "rtol",
+        "seed"
+      ],
+      "source_file": "results/historical_supplemental/summary.json",
+      "source_sha256": "1a5ad24327594fbc77b44f174336f398540aba0c17c0c451c7f74bd991adc27d"
+    }
+  },
+  "schema_version": 1
+}

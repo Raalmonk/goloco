@@ -1,0 +1,11 @@
+{
+  "official_record": "https://zenodo.org/records/14251390",
+  "official_archive": "https://zenodo.org/api/records/14251390/files/ceres-infer.zip/content",
+  "archive_bytes": 5130807234,
+  "archive_md5": "3811e49729e22d3146d2d57c04f0834c",
+  "archive_sha256": "e02feb3118663982d74c9e8187dd47c5757686b6b3bcc59d090ba4fd6d8ad30e",
+  "source_file_count": 36282,
+  "source_inventory_sha256": "8c2251bd6d6efef41a4ad9bf1d6c7d1e3a4e5a7401670e58420f9f3ac2227854",
+  "source_inventory_definition": "JSON UTF-8, sort_keys=true, separators=(comma,colon), sorted path; each entry {path: basename, bytes: integer, sha256: lowercase hex}; no newline",
+  "accepted_manifest_sha256": "7ef6694e60c2feca07290e3c0fa5c1675765c7bc2232a13395b8b14052709a6f"
+}

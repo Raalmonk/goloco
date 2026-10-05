@@ -7,3 +7,9 @@ Pipfile
 .empty
 
 
+
+# Local optimization reproduction artifacts
+/work/
+/.venv-inference/
+/.figure-venv/
+/.figures-venv/
