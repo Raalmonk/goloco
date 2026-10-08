@@ -1,14 +1,31 @@
-## Independent CPU inference and reproducibility contribution
+# GOLOCO: faster CPU inference
 
-This fork adds an independent performance study and reusable inference backend for GOLOCO. It is not an official Pritchard-lab release. The original application and documentation are preserved below.
+[GOLOCO](https://github.com/pritchardlabatpsu/goloco) turns small CRISPR screens into genome-wide predictions. This fork adds a reusable Python/Rust backend for inference from compressed CERES features, using the authors' existing models.
 
-[Contribution and usage](optimization/README.md) · [Measured results](optimization/docs/RESULTS.md) · [Figures and reproduction](optimization/figures/README.md) · [Upstream attribution](optimization/docs/ATTRIBUTION.md)
+On the supplied input with three experiments and 18,141 target genes, repeated requests took **1.35 seconds with Rust, versus 5.78 seconds with optimized Python** (4.26×). Predictions, z-scores, feature selection and CSV output matched the original in the completed checks.
 
-[![Five matched-residency observations per implementation: median 6.367 seconds for B3 Python and 0.929 seconds for the existing C0 Rust kernel, a 6.85-fold ratio. This is a replication of the earlier Rust comparison.](optimization/figures/matched_residency.png)](optimization/figures/matched_residency.svg)
+[![Resident inference: Python-fast takes 5.78 seconds; Rust with a loaded bundle takes 1.35 seconds. Five requests per backend.](optimization/figures/reusable_resident.png)](optimization/figures/reusable_resident.svg)
 
-The packaged backend has a separate 4.26× resident comparison. First use remains slower than Python-fast, source models are still required, and the slower chunking experiment is retained in the results.
+## When to use it
 
----
+Keep one backend instance alive and reuse it across requests. It retains the models in memory and computes fresh predictions for each input. The Python API is in [optimization/](optimization/README.md); [setup and CLI instructions](optimization/docs/REPRODUCE.md) cover the models, environment and Rust build.
+
+For a single request in a new process, Python-fast was quicker:
+
+| | Python-fast | Rust, existing bundle |
+| --- | ---: | ---: |
+| First completed output | 56.62 s | 62.06 s |
+| Repeated request | 5.78 s | 1.35 s |
+| Peak serving memory | 7.43 GiB | 10.84 GiB |
+
+These measurements used one CPU worker. First-output medians use three runs; repeated-request medians and memory peaks use five. Creating the Rust bundle took another 99.15 seconds once. The backend is available as a library and CLI; the original web application still uses its existing inference path.
+
+[Results](optimization/docs/RESULTS.md) include startup costs, the separate [6.85× matched-residency replication](optimization/figures/matched_residency.svg) ([PNG](optimization/figures/matched_residency.png)), and the chunking experiment that made things slower. [Regenerate all five figures](optimization/figures/README.md) from the saved records without downloading models.
+
+This is an independent fork of the Pritchard lab's GOLOCO. See [attribution and licenses](optimization/docs/ATTRIBUTION.md).
+
+<details>
+<summary>Original GOLOCO documentation</summary>
 
 # goloco
 
@@ -256,3 +273,6 @@ Meyers RM, Bryan JG, McFarland JM, Weir BA, Sizemore AE, Xu H, Dharia NV, Montgo
 <a id="3">[3]</a> 
 Dempster, J.M., Boyle, I., Vazquez, F. et al. Chronos: a cell population dynamics model of CRISPR experiments that improves inference of gene fitness effects. Genome Biol 22, 343 (2021). https://doi.org/10.1186/s13059-021-02540-7
 
+
+
+</details>

@@ -1,20 +1,14 @@
-# Reusable GOLOCO CPU inference
+# Reusable GOLOCO inference
 
-This independent contribution preserves the authors' scientific implementation and adds a reusable inference backend, verified numeric model conversion, and reproducible performance evidence. It covers compressed CERES feature input through the original genome-wide prediction table. The upstream application and author documentation remain intact.
+This backend takes compressed CERES features and produces GOLOCO's genome-wide prediction table. It keeps models in memory between requests and lets you choose Python or Rust for prediction.
 
-For the measured 18,141-target, three-experiment workload, packaged Python completed a first request in **56.62 s**, compared with **62.06 s** for Rust using an existing ordinary-load bundle. In the same persistent worker, resident medians were **5.78 s** and **1.35 s**, respectively (**4.26×**, five observations each). Use Python-fast for an isolated request under these measured conditions; a persistent Rust process amortizes its additional startup work.
+For 18,141 targets and the three supplied experiment columns, the Rust backend with a loaded bundle took 1.35 seconds per resident request; optimized Python took 5.78 seconds. That is a 4.26× ratio of medians across five requests each. First output took 62.06 seconds with Rust and 56.62 seconds with Python-fast. Python-fast suits a one-off run; Rust pays off when the process stays alive.
 
-![All five matched-residency observations: B3 median 6.37 seconds and C0 median 0.93 seconds, ratio 6.85.](figures/matched_residency.png)
-
-The figure above is the minimal B3/C0 matched-residency comparison. It reproduces the previous Rust kernel against an equally resident Python control on the new allocation; **6.85× is not an additional gain over the earlier Rust version**. The packaged API has different bookkeeping and is reported separately. [Results](docs/RESULTS.md) · [Methods](docs/METHODS.md) · [Figures and captions](figures/README.md) · [Limitations](docs/LIMITATIONS.md) · [Attribution](docs/ATTRIBUTION.md)
-
-## Regenerate figures without models
-
-From the repository root, follow the single figure command in [figures/README.md](figures/README.md). Its separate lightweight environment reads only committed sanitized records and regenerates SVG, PDF, 300-dpi PNG, and summary tables. It does not import the inference package, download models, or allocate a runtime.
+[Results](docs/RESULTS.md) · [Methods](docs/METHODS.md) · [Figures](figures/README.md) · [Limitations](docs/LIMITATIONS.md) · [Attribution](docs/ATTRIBUTION.md)
 
 ## Inference API
 
-[Reproduction instructions](docs/REPRODUCE.md) describe the pinned Linux environment, trusted official model retrieval, native build, bundle conversion, CLI, and historical model-dependent tests. After that setup, run from the repository root with `PYTHONPATH=optimization`:
+Follow the [setup instructions](docs/REPRODUCE.md) for the Linux environment, author models, native library and bundle conversion. Then run this from the repository root with `PYTHONPATH=optimization`. Keep the instance open and call `engine.predict` again for each new input.
 
 ```python
 from pathlib import Path
@@ -44,12 +38,16 @@ with HeadlessGoloco(
     print(engine.snapshot())
 ```
 
-The explicit alternatives are `numpy` (original estimator prediction with indexed input preparation), `python_fast` (original validator and unchanged scikit-learn native trees in stored order), and `rust` (original validator and the accepted native traversal). Rust requires an explicit compatible compiled library and has no silent fallback. Source-start Rust omits `model_bundle`; it exports parameters on model-cache misses.
+Choose `numpy` for the original estimator with indexed input preparation, `python_fast` for the original validator and a serial loop over scikit-learn's native trees, or `rust` for the native traversal. Rust requires a compatible library and has no automatic fallback. Omit `model_bundle` to export native parameters from source models as they enter the cache.
 
-The documented `bundle_mode="load"`, `chunk_size=1` choice performed best among the packaged resident variants here. The preserved constructor and CLI still default to `mmap` when bundle mode is omitted; set `load` explicitly for this example. The experimental `ChunkedGoloco` class and [chunk comparison](experiments/chunk_comparison.py) remain available. Chunks 64 and 256 were correct but slower, despite fewer native calls.
+Set `bundle_mode="load"` explicitly for the configuration measured above. The constructor and CLI default to `mmap`; ordinary loading was slightly faster in this workload. Keep `chunk_size=1`. The experimental `ChunkedGoloco` class remains available, but [chunks of 64 and 256 targets were slower](experiments/chunk_comparison.py).
 
-The original source estimators remain required for selected-input validation in every backend, including bundle serving. Persistent state contains models, metadata, identities, and immutable native arrays; it never contains saved final predictions or current input values. The instance is single-caller and rejects overlapping operations. [Data availability](docs/DATA_AVAILABILITY.md) explains what is published and what must be retrieved separately.
+Every backend still needs the original source estimators for input validation. The cache holds models, metadata, identities and immutable native arrays. Each call reads the current input and computes new predictions. An instance accepts one operation at a time and rejects overlapping calls. [Data availability](docs/DATA_AVAILABILITY.md) lists the model downloads and files included here.
 
-## Evidence and checks
+## Benchmarks
 
-All model-dependent execution is historical, from the completed Phase 2 Colab allocation. Publication checks hash the unchanged scientific sources, inspect syntax, validate evidence, and regenerate figures; they do not rerun inference. [SCIENTIFIC_SOURCE_MANIFEST.json](SCIENTIFIC_SOURCE_MANIFEST.json) records the preserved implementation bytes. The raw timing census is 92 records: 65 direct comparisons to fresh-original references, 25 resident requests linked to accepted first outputs, and two original workload-oracle runs. [Methods](docs/METHODS.md) defines that accounting and the exact comparison scope.
+The [matched-residency comparison](figures/matched_residency.png) measured the existing Rust kernel at 0.93 seconds against a Python control at 6.37 seconds. Its 6.85× result reproduces the earlier kernel comparison; the packaged API above includes additional bookkeeping.
+
+The [source manifest](SCIENTIFIC_SOURCE_MANIFEST.json) records the accepted implementation hashes. All 92 timing records are included: 65 direct checks against fresh original outputs, 25 resident checks linked to accepted first outputs, and two original workload-oracle runs. [Methods](docs/METHODS.md) describes the comparisons and historical model-dependent tests.
+
+To rebuild the SVG, PDF and 300-dpi PNG figures and their tables, use the command in [figures/README.md](figures/README.md). This reads the committed records in a separate plotting environment. Publication checks cover source hashes, syntax, evidence and figure generation; inference ran in the completed Phase 2 experiment.
